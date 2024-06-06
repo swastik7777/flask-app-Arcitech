@@ -1,0 +1,25 @@
+Ensure proper security groups are configured for the EC2 instance to allow web traffic on port 80.
+
+- Step 1: Identify the Security Group
+Go to the AWS Management Console: Open the AWS Management Console.
+Navigate to the EC2 Dashboard: In the services menu, select EC2.
+Find Your Instance: Under the "Instances" section, find the EC2 instance you want to configure.
+Note the Security Group: Select your instance and in the instance details, note the Security Group ID associated with it.
+
+- Step 2: Edit the Security Group
+Navigate to Security Groups: In the left-hand navigation pane under "Network & Security", click on "Security Groups".
+Select the Security Group: Find and select the security group associated with your instance.
+
+- Step 3: Add an Inbound Rule for Port 80
+Edit Inbound Rules:
+
+With the security group selected, click on the "Inbound rules" tab.
+Click on the "Edit inbound rules" button.
+Add Rule:
+
+Click "Add rule".
+Type: Select "HTTP".
+Protocol: Should automatically set to TCP.
+Port Range: Should automatically set to 80.
+Source: Select "Anywhere" if you want to allow traffic from any IP address 
+(this will set the source to 0.0.0.0/0 for IPv4 and ::/0 for IPv6). Alternatively, you can specify a custom IP range if you want to restrict access.

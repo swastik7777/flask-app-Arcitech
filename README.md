@@ -60,3 +60,5 @@ Run this is command to deploy application
 gunicorn --bind 0.0.0.0:8000 app:app
 
 Now u can access this Application on our Ec2 Public ip .
+
+--------------------------------------------------------------------------------------------------------------------------------------

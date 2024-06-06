@@ -17,3 +17,9 @@ sudo apt-get install jenkins
 - To allow Permissions for docker n jenkins and allow port number 8080 on ec2 instance for jenkins
   sudo usermod -aG jenkins ubuntu
   sudo usemod -aG docker jenkins
+
+- Jenkins intregation with github
+  step 1: check SCM pulling checkbox while creating pipeline job.
+  step 2: Go to github repo then select setting add ur webhook in your github-repo
+          syntax should be http://jenkinsurl:8080/github-webhook/
+  step 3: Add ur event in webhook so that when-ever ur event trigger,code will automatically               deploy to ur server. 
